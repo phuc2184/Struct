@@ -1,0 +1,40 @@
+//Bài 1
+//Thêm biến:deep_learning_score. Sau đó tính average của 3 môn.
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct student{
+    string name;
+    int age;
+    float ml_score;
+    float python_score;
+    float deep_learning_score;
+};
+
+int main(){
+    student s;
+    cout<<"Nhap ten : ";
+    getline(cin,s.name);
+
+    cout<<"Nhap tuoi : ";
+    cin>>s.age;
+    
+    cout<<"Nhap diem ML : ";
+    cin>>s.ml_score;
+
+    cout<<"nhap diem python : ";
+    cin>>s.python_score;
+
+    cout<<"Nhap vao diem dl : ";
+    cin>>s.deep_learning_score;
+    float avg = (s.ml_score + s.python_score+s.deep_learning_score)/3;
+
+    cout<<"\nThong tin sinh vien :\n";
+    cout<<" Ten     : "<<s.name<<endl;
+    cout<<" Tuoi    : "<<s.age<<endl;
+    cout<<" ML      :"<<s.ml_score<<endl;
+    cout<<" Python  : "<<s.python_score<<endl;
+    cout<<" Average : "<<avg<<endl;
+    return 0;
+}
